@@ -8,17 +8,11 @@ public class Main {
 		a = scn.nextInt();
 		b = scn.nextInt();
 		
-		int last = a*b;
+		int three = a*((b%100)%10);
+		int four = a*((b%100)/10);
+		int five = a*(b/100);
 		
-		int three, four, five;
-		
-		five = a * (b/100);
-		b = b-(b/100)*100;
-		four = a * (b/10);
-		b = b - (b/10)*10;
-		three = a*b;
-		
-		System.out.print(three + "\n" + four + "\n" + five + "\n" + last);
-		
+		System.out.print(three + "\n" + four + 
+				"\n" + five + "\n" + a*b);
 	}
 }
